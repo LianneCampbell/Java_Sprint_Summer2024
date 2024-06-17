@@ -19,4 +19,3 @@ This application manages a library of books, authors, and patrons. It allows pat
 
 ## Class Diagram
 ![Class Diagram](class_diagram.png)
-Create a class diagram using a tool like Lucidchart or draw.io or Visio and save it as class_diagram.png.
