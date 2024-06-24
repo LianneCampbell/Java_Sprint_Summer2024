@@ -9,9 +9,9 @@ public class Library {
     private List<Patron> patrons;
 
     public Library() {
-        items = new ArrayList<>();
-        authors = new ArrayList<>();
-        patrons = new ArrayList<>();
+        this.items = new ArrayList<>();
+        this.authors = new ArrayList<>();
+        this.patrons = new ArrayList<>();
     }
 
     public void addItem(LibraryItem item) {
@@ -26,6 +26,30 @@ public class Library {
         patrons.add(patron);
     }
 
+    public void borrowItem(String isbn, Patron patron) {
+        for (LibraryItem item : items) {
+            if (item instanceof Borrowable && item.getISBN().equals(isbn)) {
+                ((Borrowable) item).borrow(patron);
+                patron.getBorrowedItems().add(item);
+                System.out.println("Item borrowed: " + item.getTitle());
+                return;
+            }
+        }
+        System.out.println("Item not found or not borrowable.");
+    }
+
+    public void returnItem(String isbn, Patron patron) {
+        for (LibraryItem item : items) {
+            if (item instanceof Borrowable && item.getISBN().equals(isbn)) {
+                ((Borrowable) item).returnItem(patron);
+                patron.getBorrowedItems().remove(item);
+                System.out.println("Item returned: " + item.getTitle());
+                return;
+            }
+        }
+        System.out.println("Item not found or not returnable.");
+    }
+
     public LibraryItem searchItemByTitle(String title) {
         for (LibraryItem item : items) {
             if (item.getTitle().equalsIgnoreCase(title)) {
@@ -36,37 +60,41 @@ public class Library {
     }
 
     public List<LibraryItem> searchItemsByAuthor(String authorName) {
-        List<LibraryItem> result = new ArrayList<>();
         for (Author author : authors) {
             if (author.getName().equalsIgnoreCase(authorName)) {
-                result.addAll(author.getWrittenItems());
+                return author.getWrittenItems();
             }
         }
-        return result;
+        return new ArrayList<>();
     }
 
-    public LibraryItem searchItemByISBN(String ISBN) {
+    public LibraryItem searchItemByISBN(String isbn) {
         for (LibraryItem item : items) {
-            if (item.getISBN().equals(ISBN)) {
+            if (item.getISBN().equals(isbn)) {
                 return item;
             }
         }
         return null;
     }
 
-    public void borrowItem(String ISBN, Patron patron) {
-        LibraryItem item = searchItemByISBN(ISBN);
-        if (item != null && item instanceof Borrowable) {
-            ((Borrowable) item).borrowItem();
-            patron.getBorrowedItems().add(item);
+    public Patron getPatronByName(String name) {
+        for (Patron patron : patrons) {
+            if (patron.getName().equalsIgnoreCase(name)) {
+                return patron;
+            }
         }
+        return null;
     }
 
-    public void returnItem(String ISBN, Patron patron) {
-        LibraryItem item = searchItemByISBN(ISBN);
-        if (item != null && item instanceof Borrowable) {
-            ((Borrowable) item).returnItem();
-            patron.getBorrowedItems().remove(item);
-        }
+    public List<LibraryItem> getAllItems() {
+        return items;
+    }
+
+    public List<Author> getAllAuthors() {
+        return authors;
+    }
+
+    public List<Patron> getAllPatrons() {
+        return patrons;
     }
 }

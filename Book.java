@@ -2,30 +2,36 @@
 public class Book extends LibraryItem implements Borrowable {
     private Status status;
 
-    public Book(String title, String ISBN) {
-        super(title, ISBN);
+    public Book(String title, String isbn) {
+        super(title, isbn);
         this.status = Status.AVAILABLE;
     }
 
     @Override
-    public void borrowItem() {
+    public void borrow(Patron patron) {
         if (status == Status.AVAILABLE) {
-            status = Status.CHECKED_OUT;
-            System.out.println("The book has been borrowed.");
+            this.status = Status.CHECKED_OUT;
+            System.out.println("Book borrowed: " + getTitle());
         } else {
-            System.out.println("Item not available for borrowing.");
+            System.out.println("Book is not available for borrowing.");
         }
     }
 
     @Override
-    public void returnItem() {
+    public void returnItem(Patron patron) {
         if (status == Status.CHECKED_OUT) {
-            status = Status.AVAILABLE;
-            System.out.println("The book has been returned.");
+            this.status = Status.AVAILABLE;
+            System.out.println("Book returned: " + getTitle());
+        } else {
+            System.out.println("Book was not borrowed.");
         }
     }
 
     public Status getStatus() {
         return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 }

@@ -1,6 +1,6 @@
 // Borrowable.java
 public interface Borrowable {
-    void borrowItem();
+    void borrow(Patron patron);
 
-    void returnItem();
+    void returnItem(Patron patron);
 }
