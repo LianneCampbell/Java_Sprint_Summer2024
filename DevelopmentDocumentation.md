@@ -1,19 +1,21 @@
 # Development Documentation
 
 ## Source Code Directory Structure
-- `src/`
-  - `LibraryItem.java`
-  - `Book.java`
-  - `Author.java`
-  - `Patron.java`
-  - `Library.java`
-  - `Demo.java`
-  - `Borrowable.java`
-  - `Status.java`
+- `Java_Sprint_Summer2024/`
+  - `library/`
+    - `LibraryItem.java`
+    - `Book.java`
+    - `Author.java`
+    - `Patron.java`
+    - `Library.java`
+    - `Borrowable.java`
+    - `Status.java`
+  - `demo/`
+    - `Demo.java`
 
 ## Build Process
-1. Navigate to the `src` directory.
-2. Compile the source files using the command: `javac *.java`.
+1. Navigate to the `Java_Sprint_Summer2024/` directory.
+2. Navigate to the `demo/` directory.
 3. Run the `Demo` class using the command: `java Demo`.
 
 ## Compiler Dependencies

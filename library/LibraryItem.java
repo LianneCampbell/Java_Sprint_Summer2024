@@ -1,4 +1,6 @@
 // LibraryItem.java
+package library;
+
 public abstract class LibraryItem {
     private String title;
     private String ISBN;

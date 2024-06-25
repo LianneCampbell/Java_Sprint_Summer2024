@@ -1,4 +1,6 @@
 // Book.java
+package library;
+
 public class Book extends LibraryItem implements Borrowable {
     private Status status;
 

@@ -13,16 +13,21 @@ This application manages a library of books, authors, and patrons. It allows pat
 7. **Borrowable**: An interface defining methods to borrow and return items.
 8. **Status**: An enum representing the status of a book.
 
-## Demo Functionality
-1. **Initialize Library System**: Initializes the library system with authors, books, and patrons.
-2. **Borrow Books**: Demonstrates a patron borrowing multiple books.
-3. **Show Borrowed Items**: Displays the list of items borrowed by a patron.
-4. **Return Book**: Demonstrates a patron returning a book.
-5. **Show Borrowed Items After Return**: Displays the list of items borrowed by a patron after returning a book.
-6. **Show Book Statuses**: Displays the statuses of all books in the library.
-7. **Search by Title**: Searches for a book by its title and displays the result.
-8. **Search by Author**: Searches for books by an author and displays the results.
-9. **Search by ISBN**: Searches for a book by its ISBN and displays the result.
+## Library Management System
+1. **Add Book**: Allows the user to add a new book to the library.
+2. **Add Author**: Allows the user to add a new author to the library.
+3. **Add Patron**: Allows the user to add a new patron to the library.
+4. **Borrow Book**: Allows a patron to borrow a book from the library.
+5. **Return Book**: Allows a patron to return a borrowed book to the library.
+6. **Search Book by Title**: Allows the user to search for a book by its title.
+7. **Search Book by Author**: Allows the user to search for books by a specific author.
+8. **Search Book by ISBN**: Allows the user to search for a book by its ISBN.
+9. **Display All Books**: Displays all the books available in the library.
+10. **Display All Authors**: Displays all the authors available in the library.
+11. **Display All Patrons**: Displays all the patrons registered in the library.
+12. **Display Borrowed Books** by Patron: Displays the list of books borrowed by a specific patron.
+0. **Exit**: Exits the library management system.
+**Enter your choice**: Enter the corresponding number for the option you wish to initiate.
 
 ## How to Run the Application
 1. Compile all the Java files.
