@@ -39,6 +39,11 @@ public class Demo {
         Book book3 = new Book("Book Three", "ISBN003");
         Book book4 = new Book("Book Four", "ISBN004");
         Book book5 = new Book("Book Five", "ISBN005");
+        Book book6 = new Book("Book Six", "ISBN006");
+        Book book7 = new Book("Book Seven", "ISBN007");
+        Book book8 = new Book("Book Eight", "ISBN008");
+        Book book9 = new Book("Book Nine", "ISBN009");
+        Book book10 = new Book("Book Ten", "ISBN0010");
 
         // Assign books to their respective authors
         author1Books.add(book1);
@@ -46,6 +51,11 @@ public class Demo {
         author2Books.add(book3);
         author3Books.add(book4);
         author3Books.add(book5);
+        author3Books.add(book6);
+        author1Books.add(book7);
+        author2Books.add(book8);
+        author2Books.add(book9);
+        author3Books.add(book10);
 
         // Add authors to the library
         library.addAuthor(author1);
@@ -58,6 +68,11 @@ public class Demo {
         library.addItem(book3);
         library.addItem(book4);
         library.addItem(book5);
+        library.addItem(book6);
+        library.addItem(book7);
+        library.addItem(book8);
+        library.addItem(book9);
+        library.addItem(book10);
 
         // Create lists to hold borrowed items for each patron
         List<LibraryItem> patron1BorrowedItems = new ArrayList<>();
