@@ -13,7 +13,7 @@ This application manages a library of books, authors, and patrons. It allows pat
 7. **Borrowable**: An interface defining methods to borrow and return items.
 8. **Status**: An enum representing the status of a book.
 
-## Library Management System
+## Library Management System Menu
 1. **Add Book**: Allows the user to add a new book to the library.
 2. **Add Author**: Allows the user to add a new author to the library.
 3. **Add Patron**: Allows the user to add a new patron to the library.
