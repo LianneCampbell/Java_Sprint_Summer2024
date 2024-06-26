@@ -30,7 +30,7 @@ This application manages a library of books, authors, and patrons. It allows pat
 14. **Enter your choice**: Enter the corresponding number for the option you wish to initiate.
 
 ## How to Run the Application
-1. Compile all the Java files.
+1. Open Folder with VisualStudioCode or IntellijIDEA
 2. Run the `Demo` class.
 
 ## Class Diagram
